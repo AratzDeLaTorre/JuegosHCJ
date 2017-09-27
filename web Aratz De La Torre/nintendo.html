@@ -1,0 +1,69 @@
+<html>
+<title>Juegos Nintendo</title>
+<head>
+<link rel="stylesheet" href="css\barra.css">
+</head>
+<body>
+<div id="header">
+</div> 
+<ul>
+  <li><a href="inicio.html">Inicio</a></li>
+  <li class="dropdown">
+    <a class="dropbtn">Tienda</a>
+    <div class="dropdown-content">
+      <a href="nintendo.html">Nintendo</a>
+      <a href="sony.html">Sony</a>
+      <a href="xbox.html">Microsoft</a>
+    </div>
+  </li>
+</ul>
+<div>
+
+
+<table width="55%" style="width:100%">
+  <tr>
+    <th width="18%"><img src="imagenes\metroid.jpg" alt="" width="300" height="300"></th>
+    <td width="18%"><img src="imagenes\sonic.jpg" alt="" width="300" height="300"></td>
+     <td width="19%"><img src="imagenes\zelda.jpg" alt="" width="300" height="300"></td>
+     <td width="45%"></td>
+     
+  </tr>
+   <th>59€ Comprar <input type="checkbox" class="testchk" id="metroid" value=59></th>
+    <th>69€ Comprar <input type="checkbox" class="testchk" id="sonic" value= 69></th>
+    <th>19€ Comprar <input type="checkbox" class="testchk" id="zelda" value= 19></th>
+  <tr>
+  <td width="18%"><img src="imagenes\tiana.jpg" alt="" width="300" height="300"></td>
+  <td width="18%"><img src="imagenes\mario.jpg" alt="" width="300" height="300"></td>
+  <td width="19%"><img src="imagenes\quest.jpg" alt="" width="300" height="300"></td>
+  </tr>
+ <th>16€ Comprar <input type="checkbox" class="testchk" id="tiana" value=16></th>
+    <th>20€ Comprar <input type="checkbox" class="testchk"  id="mario" value=20></th>
+    <th>49€ Comprar <input type="checkbox" class="testchk"  id="quest" value=49></th>
+
+  <td width="45%"></tr>
+  
+</table>
+</div>
+
+</div>
+<div id="pie">
+<button onClick="valorCheck()">Precio Total</button>
+</div>
+<script>
+
+	function valorCheck(){
+		var valorFinal = 0; 
+		var checkBoxes = document.getElementsByClassName('testchk');
+		for(var i=0; checkBoxes[i]; ++i){
+			if(checkBoxes[i].checked){
+			   valorFinal = valorFinal + parseInt(checkBoxes[i].value);
+			}
+		}
+		
+		alert(valorFinal);
+	}
+</script>
+
+
+</body>
+</html>
